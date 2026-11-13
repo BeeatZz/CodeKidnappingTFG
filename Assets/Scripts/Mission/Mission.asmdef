@@ -1,0 +1,16 @@
+{
+    "name": "Mission",
+    "rootNamespace": "Mission",
+    "references": [
+        "CodeRunner"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": true
+}

@@ -1,0 +1,553 @@
+/* The smooth look. It is loaded after Computer.uss and only changes how things are drawn:
+   fonts, colours, rounded corners and soft borders. The layout stays the same as the pixel look.
+   Fonts: Cinzel for titles, IBM Plex Sans for the interface, IBM Plex Mono for code. */
+
+.computer-root {
+    -unity-font-definition: url("project://database/Assets/Fonts/IBMPlexSans.ttf?fileID=12800000&guid=7c90941491f8db344aad2f959474fe19&type=3#IBMPlexSans");
+    font-size: 11px;
+}
+
+/* ---------- Desktop ---------- */
+
+.computer-root .desktop-icon {
+    border-radius: 6px;
+}
+
+.computer-root .desktop-icon-selected {
+    background-color: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+.computer-root .desktop-icon-name {
+    font-size: 10px;
+    text-shadow: 0 1px 2px #000000;
+}
+
+.computer-root .memo {
+    padding: 8px;
+    border-radius: 4px;
+    border-color: rgba(0, 0, 0, 0.12);
+    font-size: 10px;
+}
+
+/* ---------- Windows ---------- */
+
+.computer-root .window {
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+}
+
+.computer-root .window-shadow {
+    left: 0;
+    top: 6px;
+    right: 0;
+    bottom: -8px;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.38);
+}
+
+.computer-root .window-frame {
+    padding: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #2b2029;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.14);
+}
+
+.computer-root .title-bar {
+    height: 24px;
+    padding: 0 8px;
+    background-color: #3a2733;
+    border-width: 0;
+    border-radius: 0;
+}
+
+.computer-root .window-focused .title-bar {
+    background-color: #8f2233;
+}
+
+.computer-root .title-text {
+    -unity-font-definition: url("project://database/Assets/Fonts/Cinzel.ttf?fileID=12800000&guid=ddf484fff725fd94484b99cf8ba5f40f&type=3#Cinzel");
+    font-size: 12px;
+    color: #cdb9be;
+}
+
+.computer-root .window-focused .title-text {
+    color: #fff1d6;
+}
+
+.computer-root .title-button {
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+    border-width: 0;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #efe6e8;
+    font-size: 10px;
+}
+
+.computer-root .title-button:hover {
+    background-color: rgba(255, 255, 255, 0.26);
+}
+
+.computer-root .title-button-close:hover {
+    background-color: #d23b4b;
+}
+
+.computer-root .window-body {
+    margin-top: 0;
+}
+
+.computer-root .resize-corner {
+    right: 3px;
+    bottom: 3px;
+    width: 8px;
+    height: 8px;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.22);
+}
+
+/* ---------- Buttons ---------- */
+
+.computer-root .tool-button {
+    height: 18px;
+    margin-right: 6px;
+    padding: 0 8px;
+    border-radius: 5px;
+    border-color: rgba(0, 0, 0, 0.2);
+    background-color: #dccfa6;
+    color: #2a1a12;
+    font-size: 11px;
+}
+
+.computer-root .tool-button:hover {
+    background-color: #e9ddb8;
+}
+
+.computer-root .tool-button:active {
+    background-color: #cdbd8f;
+    border-color: rgba(0, 0, 0, 0.3);
+}
+
+.computer-root .tool-button-active {
+    background-color: #a3202b;
+    color: #ffe9c4;
+}
+
+.computer-root .seal-button {
+    height: 18px;
+    margin-right: 6px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border-color: rgba(0, 0, 0, 0.28);
+    background-color: #a3202b;
+    color: #ffe9c4;
+    font-size: 11px;
+}
+
+.computer-root .seal-button:hover {
+    background-color: #bd2a37;
+}
+
+/* ---------- Work order window ---------- */
+
+.computer-root .tab-strip {
+    height: 24px;
+    padding-left: 8px;
+}
+
+.computer-root .tab {
+    height: 20px;
+    margin-right: 3px;
+    padding: 0 12px;
+    border-width: 0;
+    border-radius: 6px 6px 0 0;
+    background-color: #3b2a33;
+    color: #bfa9b0;
+    font-size: 11px;
+}
+
+.computer-root .tab:hover {
+    color: #ffe3a8;
+    background-color: #46323c;
+}
+
+.computer-root .tab-active {
+    height: 24px;
+    background-color: #efe3c2;
+    color: #2a1a12;
+}
+
+.computer-root .tab-badge {
+    margin-left: 6px;
+    padding: 0 5px;
+    border-radius: 7px;
+    font-size: 9px;
+}
+
+.computer-root .tab-badge-error {
+    background-color: #b52534;
+}
+
+.computer-root .toolbar {
+    padding: 6px 8px;
+    background-color: #efe3c2;
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(0, 0, 0, 0.12);
+}
+
+.computer-root .toolbar-status {
+    font-size: 11px;
+}
+
+.computer-root .pane-area {
+    margin-top: 0;
+}
+
+.computer-root .pane {
+    background-color: #efe3c2;
+    border-width: 0;
+}
+
+.computer-root .roller {
+    height: 3px;
+    background-color: rgba(156, 107, 53, 0.55);
+    border-width: 0;
+}
+
+.computer-root .pane-heading {
+    -unity-font-definition: url("project://database/Assets/Fonts/Cinzel.ttf?fileID=12800000&guid=ddf484fff725fd94484b99cf8ba5f40f&type=3#Cinzel");
+    font-size: 14px;
+}
+
+.computer-root .pane-hint {
+    font-size: 10px;
+    border-top-color: rgba(0, 0, 0, 0.12);
+}
+
+.computer-root .status-bar {
+    margin-top: 0;
+    padding: 3px 10px;
+    border-width: 0;
+    background-color: #231a21;
+    font-size: 10px;
+}
+
+/* ---------- Code editor ---------- */
+
+.computer-root .code-editor {
+    background-color: #f2e8c9;
+}
+
+.computer-root .code-gutter {
+    background-color: #e6d7ad;
+    border-right-color: rgba(0, 0, 0, 0.14);
+}
+
+.computer-root .code-text {
+    -unity-font-definition: url("project://database/Assets/Fonts/IBMPlexMono-Regular.ttf?fileID=12800000&guid=a3f82642d99edc24db217a5d8fa008fb&type=3#IBMPlexMono-Regular");
+    font-size: 12px;
+}
+
+.computer-root .code-field > .unity-base-text-field__input {
+    -unity-font-definition: url("project://database/Assets/Fonts/IBMPlexMono-Regular.ttf?fileID=12800000&guid=a3f82642d99edc24db217a5d8fa008fb&type=3#IBMPlexMono-Regular");
+    font-size: 12px;
+}
+
+.computer-root .code-gutter {
+    width: 30px;
+}
+
+.computer-root .wax-bar {
+    background-color: #f7edcc;
+    font-size: 11px;
+}
+
+.computer-root .wax-text {
+    font-size: 11px;
+}
+
+/* ---------- Run log, console and scanned ---------- */
+
+.computer-root .log-number {
+    -unity-font-definition: url("project://database/Assets/Fonts/IBMPlexMono-Regular.ttf?fileID=12800000&guid=a3f82642d99edc24db217a5d8fa008fb&type=3#IBMPlexMono-Regular");
+    font-size: 11px;
+    width: 30px;
+}
+
+.computer-root .log-text {
+    font-size: 11px;
+}
+
+.computer-root .console {
+    background-color: #15111b;
+}
+
+.computer-root .console-line {
+    -unity-font-definition: url("project://database/Assets/Fonts/IBMPlexMono-Regular.ttf?fileID=12800000&guid=a3f82642d99edc24db217a5d8fa008fb&type=3#IBMPlexMono-Regular");
+    font-size: 12px;
+}
+
+.computer-root .console-prompt {
+    -unity-font-definition: url("project://database/Assets/Fonts/IBMPlexMono-Regular.ttf?fileID=12800000&guid=a3f82642d99edc24db217a5d8fa008fb&type=3#IBMPlexMono-Regular");
+    font-size: 12px;
+}
+
+.computer-root .console-row {
+    background-color: #0e0b13;
+}
+
+.computer-root .console-input > .unity-base-text-field__input {
+    -unity-font-definition: url("project://database/Assets/Fonts/IBMPlexMono-Regular.ttf?fileID=12800000&guid=a3f82642d99edc24db217a5d8fa008fb&type=3#IBMPlexMono-Regular");
+    font-size: 12px;
+}
+
+.computer-root .handle-row {
+    -unity-font-definition: url("project://database/Assets/Fonts/IBMPlexMono-Regular.ttf?fileID=12800000&guid=a3f82642d99edc24db217a5d8fa008fb&type=3#IBMPlexMono-Regular");
+    font-size: 12px;
+    border-radius: 4px;
+    margin: 0 4px;
+}
+
+.computer-root .handle-row-selected {
+    background-color: rgba(163, 32, 43, 0.14);
+    border-left-width: 3px;
+    border-left-color: #a3202b;
+}
+
+.computer-root .handle-type {
+    -unity-font-definition: url("project://database/Assets/Fonts/IBMPlexSans.ttf?fileID=12800000&guid=7c90941491f8db344aad2f959474fe19&type=3#IBMPlexSans");
+    font-size: 9px;
+}
+
+.computer-root .scanned-list {
+    border-right-color: rgba(0, 0, 0, 0.14);
+}
+
+.computer-root .card-title {
+    -unity-font-definition: url("project://database/Assets/Fonts/Cinzel.ttf?fileID=12800000&guid=ddf484fff725fd94484b99cf8ba5f40f&type=3#Cinzel");
+    font-size: 18px;
+}
+
+.computer-root .card-subtitle {
+    font-size: 11px;
+}
+
+.computer-root .card-line {
+    -unity-font-definition: url("project://database/Assets/Fonts/IBMPlexMono-Regular.ttf?fileID=12800000&guid=a3f82642d99edc24db217a5d8fa008fb&type=3#IBMPlexMono-Regular");
+    font-size: 12px;
+}
+
+.computer-root .card-note {
+    -unity-font-definition: url("project://database/Assets/Fonts/IBMPlexSans.ttf?fileID=12800000&guid=7c90941491f8db344aad2f959474fe19&type=3#IBMPlexSans");
+    font-size: 10px;
+}
+
+/* ---------- Scrying glass, folders and notepad ---------- */
+
+.computer-root .scrying-glass {
+    padding: 8px;
+    background-color: #efe3c2;
+    border-width: 0;
+}
+
+.computer-root .scrying-view {
+    border-radius: 6px;
+    border-color: rgba(0, 0, 0, 0.4);
+}
+
+.computer-root .scrying-tip {
+    border-radius: 4px;
+    font-size: 10px;
+}
+
+.computer-root .scrying-hint {
+    font-size: 10px;
+}
+
+.computer-root .simple-app {
+    background-color: #efe3c2;
+    border-width: 0;
+}
+
+.computer-root .explorer-path {
+    font-size: 11px;
+}
+
+.computer-root .explorer-list .desktop-icon-selected {
+    border-radius: 6px;
+}
+
+.computer-root .notepad-path {
+    font-size: 10px;
+    border-bottom-color: rgba(0, 0, 0, 0.14);
+}
+
+.computer-root .notepad-field {
+    background-color: #f7eecf;
+}
+
+.computer-root .notepad-field > .unity-base-text-field__input {
+    -unity-font-definition: url("project://database/Assets/Fonts/IBMPlexMono-Regular.ttf?fileID=12800000&guid=a3f82642d99edc24db217a5d8fa008fb&type=3#IBMPlexMono-Regular");
+    font-size: 12px;
+}
+
+.computer-root .prompt-input > .unity-base-text-field__input {
+    -unity-font-definition: url("project://database/Assets/Fonts/IBMPlexMono-Regular.ttf?fileID=12800000&guid=a3f82642d99edc24db217a5d8fa008fb&type=3#IBMPlexMono-Regular");
+    font-size: 12px;
+    border-radius: 4px;
+    border-color: rgba(0, 0, 0, 0.3);
+}
+
+/* ---------- Scroll bars ---------- */
+
+.computer-root .unity-scroller .unity-base-slider__tracker {
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
+.computer-root .unity-scroller .unity-base-slider__dragger {
+    border-width: 0;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.32);
+}
+
+/* ---------- Taskbar and menus ---------- */
+
+.computer-root .taskbar {
+    height: 26px;
+    padding: 0 6px;
+    background-color: rgba(24, 17, 23, 0.94);
+    border-top-width: 1px;
+    border-top-color: rgba(255, 255, 255, 0.12);
+}
+
+.computer-root .start-button {
+    height: 20px;
+    padding: 0 10px;
+    border-radius: 6px;
+    border-color: rgba(0, 0, 0, 0.3);
+    background-color: #8f2233;
+    color: #ffe3a8;
+    -unity-font-definition: url("project://database/Assets/Fonts/Cinzel.ttf?fileID=12800000&guid=ddf484fff725fd94484b99cf8ba5f40f&type=3#Cinzel");
+    font-size: 13px;
+}
+
+.computer-root .start-button:hover {
+    background-color: #a3283b;
+}
+
+.computer-root .start-button-active {
+    background-color: #6f1a28;
+}
+
+.computer-root .task-button {
+    height: 20px;
+    max-width: 110px;
+    padding: 0 8px;
+    border-width: 0;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #e6dadd;
+    font-size: 10px;
+}
+
+.computer-root .task-button:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.computer-root .task-button-active {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffe3a8;
+    border-bottom-width: 2px;
+    border-bottom-color: #e8b44a;
+}
+
+.computer-root .clock {
+    height: 20px;
+    padding: 0 8px;
+    border-width: 0;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.07);
+    font-size: 10px;
+}
+
+.computer-root .start-menu,
+.computer-root .context-menu {
+    padding: 4px;
+    border-width: 1px;
+    border-radius: 8px;
+    border-color: rgba(255, 255, 255, 0.16);
+    background-color: rgba(33, 23, 30, 0.97);
+}
+
+.computer-root .start-menu {
+    bottom: 30px;
+    width: 130px;
+}
+
+.computer-root .start-menu-heading {
+    margin-bottom: 4px;
+    padding: 4px 8px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #e8b44a;
+    -unity-font-definition: url("project://database/Assets/Fonts/Cinzel.ttf?fileID=12800000&guid=ddf484fff725fd94484b99cf8ba5f40f&type=3#Cinzel");
+    font-size: 14px;
+}
+
+.computer-root .start-menu-item {
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 11px;
+}
+
+.computer-root .start-menu-line {
+    height: 1px;
+    margin: 4px 4px;
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.computer-root .toast {
+    padding: 6px 14px;
+    border-radius: 6px;
+    border-color: rgba(232, 180, 74, 0.5);
+    background-color: rgba(20, 12, 16, 0.96);
+    font-size: 11px;
+}
+
+.computer-root .dialog {
+    padding: 0;
+    overflow: hidden;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: rgba(255, 255, 255, 0.16);
+    background-color: #2b2029;
+}
+
+.computer-root .dialog-title {
+    padding: 6px 12px;
+    background-color: #8f2233;
+    color: #ffe3a8;
+    -unity-font-definition: url("project://database/Assets/Fonts/Cinzel.ttf?fileID=12800000&guid=ddf484fff725fd94484b99cf8ba5f40f&type=3#Cinzel");
+    font-size: 14px;
+}
+
+.computer-root .dialog-body {
+    padding: 12px;
+}
+
+.computer-root .dialog-text {
+    font-size: 11px;
+}
+
+.computer-root .dialog-buttons {
+    margin: 8px 8px 8px 0;
+}
+
+.computer-root .dialog-button {
+    margin: 8px 8px 8px 0;
+}

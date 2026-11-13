@@ -1,0 +1,1191 @@
+/* The look of the demonic desktop. Sizes are in interface units: at 1080p one unit is two screen pixels.
+   Every selector starts with .computer-root so Unity's default control styles can not win over it. */
+
+:root {
+    --black: #0d070b;
+    --iron: #3b2b31;
+    --iron-light: #5f4a50;
+    --iron-dark: #1f1317;
+    --blood: #a3202b;
+    --blood-light: #d23b3b;
+    --gold: #e8b44a;
+    --gold-dark: #9a6a1e;
+    --parch: #ead9a8;
+    --parch-dark: #cdb47e;
+    --parch-edge: #a98a55;
+    --ink: #2a1a12;
+    --wood: #9c6b35;
+    --ember: #ff7a2f;
+    --scry: #6fe3e0;
+}
+
+.computer-root {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -unity-font-definition: url("project://database/Assets/Fonts/PixelifySans.ttf?fileID=12800000&guid=9973257a3672dc649ae47bef2bec4c97&type=3#PixelifySans");
+    font-size: 12px;
+    color: var(--parch);
+}
+
+.computer-root .desktop {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    flex-direction: column;
+    background-color: var(--black);
+}
+
+.computer-root .desktop-area {
+    flex-grow: 1;
+}
+
+.computer-root .wallpaper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.computer-root .window-layer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+/* ---------- Scroll bars: thin, with no arrow buttons ---------- */
+
+.computer-root .unity-scroller__low-button,
+.computer-root .unity-scroller__high-button {
+    display: none;
+}
+
+.computer-root .unity-scroller--vertical {
+    width: 8px;
+}
+
+.computer-root .unity-scroller--horizontal {
+    height: 8px;
+}
+
+.computer-root .unity-scroller .unity-base-slider__tracker {
+    background-color: #d6c08b;
+    border-width: 0;
+    border-radius: 0;
+}
+
+.computer-root .unity-scroller .unity-base-slider__dragger {
+    background-color: var(--iron);
+    border-width: 1px;
+    border-radius: 0;
+    border-color: var(--black);
+}
+
+.computer-root .unity-scroller--vertical .unity-base-slider--vertical {
+    margin: 0;
+    width: 8px;
+}
+
+.computer-root .unity-scroller--horizontal .unity-base-slider--horizontal {
+    margin: 0;
+    height: 8px;
+}
+
+.computer-root .unity-scroller--vertical .unity-base-slider__drag-container,
+.computer-root .unity-scroller--horizontal .unity-base-slider__drag-container {
+    margin: 0;
+}
+
+.computer-root .unity-scroller__slider,
+.computer-root .unity-scroller .unity-base-slider {
+    min-width: 0;
+    min-height: 0;
+}
+
+.computer-root .unity-scroller--vertical .unity-scroller__slider {
+    width: 8px;
+}
+
+.computer-root .unity-scroller--horizontal .unity-scroller__slider {
+    height: 8px;
+}
+
+/* ---------- Desktop icons and the memo ---------- */
+
+.computer-root .icon-layer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.computer-root .desktop-icon {
+    width: 92px;
+    height: 70px;
+    overflow: hidden;
+    flex-shrink: 0;
+    align-items: center;
+    padding: 3px 2px;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.computer-root .desktop-icon-free {
+    position: absolute;
+}
+
+.computer-root .desktop-icon-dragging {
+    opacity: 0.7;
+}
+
+.computer-root .desktop-icon-selected {
+    background-color: rgba(163, 32, 43, 0.45);
+    border-color: var(--gold);
+}
+
+.computer-root .desktop-icon-image {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+}
+
+.computer-root .desktop-icon-name {
+    margin-top: 2px;
+    max-width: 88px;
+    max-height: 30px;
+    overflow: hidden;
+    color: white;
+    font-size: 11px;
+    white-space: normal;
+    -unity-text-align: upper-center;
+    text-shadow: 1px 1px 0 #000000;
+}
+
+.computer-root .memo {
+    position: absolute;
+    right: 14px;
+    top: 12px;
+    width: 112px;
+    padding: 6px;
+    background-color: #f0d96a;
+    color: #3a2a10;
+    border-width: 1px;
+    border-color: #c8ae3c;
+    font-size: 12px;
+    white-space: normal;
+    rotate: 1.5deg;
+}
+
+/* ---------- Windows ---------- */
+
+.computer-root .window {
+    position: absolute;
+    min-width: 200px;
+    min-height: 120px;
+    padding: 1px;
+    background-color: var(--black);
+}
+
+.computer-root .window-shadow {
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    right: -4px;
+    bottom: -4px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.computer-root .window-frame {
+    flex-grow: 1;
+    padding: 2px;
+    background-color: var(--iron);
+    border-width: 2px;
+    border-top-color: var(--iron-light);
+    border-left-color: var(--iron-light);
+    border-right-color: var(--iron-dark);
+    border-bottom-color: var(--iron-dark);
+}
+
+.computer-root .title-bar {
+    flex-direction: row;
+    flex-shrink: 0;
+    align-items: center;
+    height: 20px;
+    padding: 0 3px;
+    background-color: #5a3a40;
+    border-width: 1px;
+    border-color: var(--black);
+}
+
+.computer-root .title-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+}
+
+.computer-root .title-text {
+    flex-grow: 1;
+    -unity-font-definition: url("project://database/Assets/Fonts/Jacquard12-Regular.ttf?fileID=12800000&guid=8ce9f7e47e686014ca523f06ba8917f4&type=3#Jacquard12-Regular");
+    font-size: 18px;
+    color: #c9b8b8;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -unity-text-align: middle-left;
+}
+
+.computer-root .window-focused .title-bar {
+    background-color: var(--blood);
+}
+
+.computer-root .window-focused .title-text {
+    color: var(--gold);
+}
+
+.computer-root .title-button {
+    width: 14px;
+    height: 14px;
+    margin: 0 0 0 3px;
+    padding: 0;
+    background-color: var(--iron);
+    color: var(--parch);
+    font-size: 12px;
+    -unity-text-align: middle-center;
+    border-width: 1px;
+    border-radius: 0;
+    border-top-color: var(--iron-light);
+    border-left-color: var(--iron-light);
+    border-right-color: var(--iron-dark);
+    border-bottom-color: var(--iron-dark);
+}
+
+.computer-root .title-button:hover {
+    background-color: var(--iron-light);
+}
+
+.computer-root .title-button-close:hover {
+    background-color: var(--blood);
+}
+
+.computer-root .window-body {
+    flex-grow: 1;
+    margin-top: 2px;
+}
+
+.computer-root .resize-corner {
+    position: absolute;
+    right: 1px;
+    bottom: 1px;
+    width: 8px;
+    height: 8px;
+    background-color: rgba(154, 106, 30, 0.9);
+}
+
+/* ---------- Buttons ---------- */
+
+.computer-root .tool-button {
+    height: 16px;
+    margin: 0 6px 0 0;
+    padding: 0 6px;
+    background-color: var(--parch-dark);
+    color: var(--ink);
+    font-size: 12px;
+    -unity-text-align: middle-center;
+    border-width: 1px;
+    border-radius: 0;
+    border-top-color: #f3e7c4;
+    border-left-color: #f3e7c4;
+    border-right-color: var(--parch-edge);
+    border-bottom-color: var(--parch-edge);
+}
+
+.computer-root .tool-button:hover {
+    background-color: #d9c38b;
+}
+
+.computer-root .tool-button:active {
+    border-top-color: var(--parch-edge);
+    border-left-color: var(--parch-edge);
+    border-right-color: #f3e7c4;
+    border-bottom-color: #f3e7c4;
+}
+
+.computer-root .tool-button:disabled {
+    opacity: 0.45;
+}
+
+.computer-root .tool-button-active {
+    background-color: var(--blood);
+    color: var(--gold);
+}
+
+.computer-root .seal-button {
+    height: 16px;
+    margin: 0 6px 0 0;
+    padding: 0 8px;
+    background-color: var(--blood);
+    color: var(--gold);
+    font-size: 12px;
+    -unity-text-align: middle-center;
+    border-width: 1px;
+    border-radius: 0;
+    border-top-color: var(--blood-light);
+    border-left-color: var(--blood-light);
+    border-right-color: #5a0f16;
+    border-bottom-color: #5a0f16;
+}
+
+.computer-root .seal-button:hover {
+    background-color: #b82a36;
+}
+
+.computer-root .seal-button:disabled {
+    opacity: 0.55;
+}
+
+/* ---------- The work order window ---------- */
+
+.computer-root .work-order {
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+.computer-root .tab-strip {
+    flex-direction: row;
+    flex-shrink: 0;
+    align-items: flex-end;
+    height: 21px;
+    padding-left: 4px;
+}
+
+.computer-root .tab {
+    flex-direction: row;
+    align-items: center;
+    height: 18px;
+    margin: 0 2px 0 0;
+    padding: 0 8px;
+    background-color: #4b3036;
+    color: #c9b3a8;
+    font-size: 12px;
+    border-width: 1px 1px 0 1px;
+    border-radius: 0;
+    border-color: var(--black);
+}
+
+.computer-root .tab:hover {
+    color: var(--gold);
+}
+
+.computer-root .tab-active {
+    height: 21px;
+    background-color: var(--parch);
+    color: var(--ink);
+}
+
+.computer-root .tab-badge {
+    margin-left: 5px;
+    padding: 0 4px;
+    background-color: rgba(0, 0, 0, 0.35);
+    color: var(--parch);
+    font-size: 10px;
+}
+
+.computer-root .tab-badge-error {
+    background-color: var(--blood);
+    color: white;
+}
+
+.computer-root .toolbar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    align-items: center;
+    padding: 4px 6px;
+    background-color: var(--parch);
+    border-width: 1px;
+    border-color: var(--black);
+}
+
+.computer-root .toolbar-status {
+    margin-left: auto;
+    color: var(--gold-dark);
+    font-size: 12px;
+}
+
+.computer-root .toolbar-status-bad {
+    color: var(--blood);
+}
+
+.computer-root .pane-area {
+    flex-grow: 1;
+    margin-top: 2px;
+}
+
+.computer-root .pane {
+    flex-grow: 1;
+    flex-direction: column;
+    background-color: var(--parch);
+    color: var(--ink);
+    border-width: 1px;
+    border-color: var(--black);
+}
+
+.computer-root .roller {
+    flex-shrink: 0;
+    height: 7px;
+    background-color: var(--wood);
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-color: #c58e4d;
+    border-bottom-color: #6b4423;
+}
+
+.computer-root .pane-list {
+    flex-grow: 1;
+    padding: 6px 8px;
+}
+
+.computer-root .pane-heading {
+    margin: 2px 0 2px 0;
+    -unity-font-definition: url("project://database/Assets/Fonts/Jacquard12-Regular.ttf?fileID=12800000&guid=8ce9f7e47e686014ca523f06ba8917f4&type=3#Jacquard12-Regular");
+    font-size: 18px;
+    color: var(--blood);
+}
+
+.computer-root .pane-hint {
+    flex-shrink: 0;
+    padding: 3px 8px;
+    border-top-width: 1px;
+    border-top-color: var(--parch-edge);
+    color: #6b5230;
+    font-size: 11px;
+    white-space: normal;
+}
+
+.computer-root .status-bar {
+    flex-direction: row;
+    flex-shrink: 0;
+    justify-content: space-between;
+    margin-top: 2px;
+    padding: 1px 6px;
+    background-color: var(--iron-dark);
+    color: #c9b3a8;
+    font-size: 11px;
+    border-width: 1px;
+    border-color: var(--black);
+}
+
+.computer-root .status-left {
+    flex-grow: 1;
+}
+
+/* ---------- The code editor ---------- */
+
+.computer-root .code-editor {
+    flex-grow: 1;
+    flex-direction: row;
+    background-color: var(--parch);
+}
+
+.computer-root .code-gutter {
+    width: 26px;
+    flex-shrink: 0;
+    overflow: hidden;
+    background-color: #d6c08b;
+    border-right-width: 1px;
+    border-right-color: var(--parch-edge);
+}
+
+.computer-root .code-gutter-text {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding-right: 5px;
+    -unity-text-align: upper-right;
+}
+
+.computer-root .code-scroll {
+    flex-grow: 1;
+}
+
+.computer-root .code-text {
+    -unity-font-definition: url("project://database/Assets/Fonts/VT323-Regular.ttf?fileID=12800000&guid=8cea0fd44a07db84cadce51fc83bf1f0&type=3#VT323-Regular");
+    font-size: 16px;
+    color: var(--ink);
+    white-space: nowrap;
+    margin: 0;
+    border-width: 0;
+    padding: 0;
+}
+
+.computer-root .code-colored {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.computer-root .code-marks {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.computer-root .line-mark {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.computer-root .line-current {
+    background-color: rgba(138, 90, 26, 0.13);
+}
+
+.computer-root .line-error {
+    background-color: rgba(163, 32, 43, 0.16);
+}
+
+.computer-root .line-running {
+    background-color: rgba(232, 180, 74, 0.6);
+    border-left-width: 3px;
+    border-left-color: var(--blood);
+}
+
+.computer-root .squiggle {
+    position: absolute;
+    height: 2px;
+}
+
+.computer-root .code-field {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    --unity-cursor-color: #a3202b;
+    --unity-selection-color: rgba(163, 32, 43, 0.35);
+}
+
+.computer-root .code-field > .unity-base-text-field__input {
+    --unity-cursor-color: #a3202b;
+    --unity-selection-color: rgba(163, 32, 43, 0.35);
+    flex-grow: 1;
+    margin: 0;
+    border-width: 0;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0);
+    -unity-font-definition: url("project://database/Assets/Fonts/VT323-Regular.ttf?fileID=12800000&guid=8cea0fd44a07db84cadce51fc83bf1f0&type=3#VT323-Regular");
+    font-size: 16px;
+    white-space: nowrap;
+    -unity-text-align: upper-left;
+}
+
+.computer-root .wax-bar {
+    flex-direction: row;
+    flex-shrink: 0;
+    align-items: center;
+    min-height: 20px;
+    padding: 3px 8px;
+    background-color: #f3e2b8;
+    border-top-width: 2px;
+    border-top-color: var(--blood);
+}
+
+.computer-root .wax-bar-ok {
+    border-top-color: var(--parch-edge);
+}
+
+.computer-root .wax-text {
+    flex-grow: 1;
+    flex-shrink: 1;
+    color: #5a1018;
+    font-size: 12px;
+    white-space: normal;
+}
+
+.computer-root .wax-bar-ok .wax-text {
+    color: #5c6b2a;
+}
+
+/* ---------- Run log ---------- */
+
+.computer-root .log-row {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 1px;
+}
+
+.computer-root .log-number {
+    width: 28px;
+    flex-shrink: 0;
+    -unity-font-definition: url("project://database/Assets/Fonts/VT323-Regular.ttf?fileID=12800000&guid=8cea0fd44a07db84cadce51fc83bf1f0&type=3#VT323-Regular");
+    font-size: 16px;
+    color: #8d7547;
+}
+
+.computer-root .log-text {
+    flex-grow: 1;
+    flex-shrink: 1;
+    font-size: 12px;
+    white-space: normal;
+}
+
+.computer-root .log-ok {
+    color: #2f5a2f;
+}
+
+.computer-root .log-error {
+    color: var(--blood);
+}
+
+.computer-root .log-info {
+    color: #6b5230;
+}
+
+.computer-root .log-warning {
+    color: #a8641a;
+}
+
+/* ---------- Console ---------- */
+
+.computer-root .console {
+    background-color: #120d16;
+}
+
+.computer-root .console .pane-hint {
+    color: #8d7a9a;
+    border-top-color: #3a2a44;
+}
+
+.computer-root .console-line {
+    -unity-font-definition: url("project://database/Assets/Fonts/VT323-Regular.ttf?fileID=12800000&guid=8cea0fd44a07db84cadce51fc83bf1f0&type=3#VT323-Regular");
+    font-size: 16px;
+    white-space: normal;
+    margin: 0;
+}
+
+.computer-root .console-info {
+    color: #8d7a9a;
+}
+
+.computer-root .console-command {
+    color: var(--scry);
+}
+
+.computer-root .console-value {
+    color: #ffd08a;
+}
+
+.computer-root .console-error {
+    color: #ff8a7a;
+}
+
+.computer-root .console-row {
+    flex-direction: row;
+    flex-shrink: 0;
+    align-items: center;
+    padding: 3px 8px;
+    background-color: #0a070d;
+    border-top-width: 1px;
+    border-top-color: #3a2a44;
+}
+
+.computer-root .console-prompt {
+    margin-right: 6px;
+    -unity-font-definition: url("project://database/Assets/Fonts/VT323-Regular.ttf?fileID=12800000&guid=8cea0fd44a07db84cadce51fc83bf1f0&type=3#VT323-Regular");
+    font-size: 16px;
+    color: var(--gold);
+}
+
+.computer-root .console-input {
+    flex-grow: 1;
+    margin: 0;
+}
+
+.computer-root .console-input > .unity-base-text-field__input {
+    --unity-cursor-color: #6fe3e0;
+    --unity-selection-color: rgba(111, 227, 224, 0.3);
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--ember);
+    -unity-font-definition: url("project://database/Assets/Fonts/VT323-Regular.ttf?fileID=12800000&guid=8cea0fd44a07db84cadce51fc83bf1f0&type=3#VT323-Regular");
+    font-size: 16px;
+}
+
+/* ---------- Scanned objects ---------- */
+
+.computer-root .scanned-body {
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.computer-root .scanned-list {
+    width: 132px;
+    flex-shrink: 0;
+    border-right-width: 1px;
+    border-right-color: var(--parch-edge);
+    padding: 4px 0;
+}
+
+.computer-root .handle-row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 2px 6px;
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--ink);
+    border-width: 0;
+    border-radius: 0;
+    -unity-font-definition: url("project://database/Assets/Fonts/VT323-Regular.ttf?fileID=12800000&guid=8cea0fd44a07db84cadce51fc83bf1f0&type=3#VT323-Regular");
+    font-size: 16px;
+}
+
+.computer-root .handle-row:hover {
+    background-color: rgba(138, 90, 26, 0.12);
+}
+
+.computer-root .handle-row-selected {
+    background-color: rgba(138, 90, 26, 0.22);
+    border-left-width: 3px;
+    border-left-color: var(--blood);
+}
+
+.computer-root .handle-type {
+    margin-left: 6px;
+    -unity-font-definition: url("project://database/Assets/Fonts/PixelifySans.ttf?fileID=12800000&guid=9973257a3672dc649ae47bef2bec4c97&type=3#PixelifySans");
+    font-size: 10px;
+    color: #6b5230;
+}
+
+.computer-root .scanned-card {
+    flex-grow: 1;
+    padding: 6px 10px;
+}
+
+.computer-root .card-title {
+    -unity-font-definition: url("project://database/Assets/Fonts/Jacquard12-Regular.ttf?fileID=12800000&guid=8ce9f7e47e686014ca523f06ba8917f4&type=3#Jacquard12-Regular");
+    font-size: 24px;
+    color: var(--blood);
+}
+
+.computer-root .card-subtitle {
+    margin-bottom: 4px;
+    color: #6b5230;
+    font-size: 12px;
+}
+
+.computer-root .card-line {
+    -unity-font-definition: url("project://database/Assets/Fonts/VT323-Regular.ttf?fileID=12800000&guid=8cea0fd44a07db84cadce51fc83bf1f0&type=3#VT323-Regular");
+    font-size: 16px;
+    white-space: normal;
+    margin: 0;
+}
+
+.computer-root .card-property {
+    color: #1f4f8a;
+}
+
+.computer-root .card-method {
+    color: #8a4a10;
+}
+
+.computer-root .card-action {
+    color: #c2541a;
+}
+
+.computer-root .card-note {
+    margin-left: 10px;
+    -unity-font-definition: url("project://database/Assets/Fonts/PixelifySans.ttf?fileID=12800000&guid=9973257a3672dc649ae47bef2bec4c97&type=3#PixelifySans");
+    font-size: 11px;
+    color: #6b5230;
+}
+
+.computer-root .card-buttons {
+    flex-direction: row;
+    margin-top: 8px;
+}
+
+/* ---------- Scrying glass and simple apps ---------- */
+
+.computer-root .scrying-glass {
+    flex-grow: 1;
+    padding: 4px;
+    background-color: var(--parch);
+    border-width: 1px;
+    border-color: var(--black);
+}
+
+.computer-root .camera-buttons {
+    flex-direction: row;
+    margin-bottom: 4px;
+}
+
+.computer-root .scrying-view {
+    width: 100%;
+    background-color: var(--black);
+    border-width: 1px;
+    border-color: var(--black);
+}
+
+.computer-root .scrying-tip {
+    position: absolute;
+    padding: 1px 5px;
+    background-color: var(--black);
+    color: var(--gold);
+    font-size: 11px;
+    border-width: 1px;
+    border-color: var(--gold-dark);
+}
+
+.computer-root .scrying-hint {
+    margin-top: 3px;
+    color: #6b5230;
+    font-size: 11px;
+}
+
+.computer-root .simple-app {
+    flex-grow: 1;
+    flex-direction: column;
+    background-color: var(--parch);
+    color: var(--ink);
+    border-width: 1px;
+    border-color: var(--black);
+}
+
+.computer-root .simple-list {
+    flex-grow: 1;
+    padding: 4px;
+}
+
+/* ---------- Taskbar, start menu and messages ---------- */
+
+.computer-root .taskbar {
+    flex-direction: row;
+    flex-shrink: 0;
+    align-items: center;
+    height: 22px;
+    padding: 0 3px;
+    background-color: var(--iron);
+    border-top-width: 2px;
+    border-top-color: var(--black);
+}
+
+.computer-root .start-button {
+    flex-direction: row;
+    align-items: center;
+    height: 16px;
+    margin: 0 6px 0 0;
+    padding: 0 6px;
+    background-color: var(--blood);
+    color: var(--gold);
+    -unity-font-definition: url("project://database/Assets/Fonts/Jacquard12-Regular.ttf?fileID=12800000&guid=8ce9f7e47e686014ca523f06ba8917f4&type=3#Jacquard12-Regular");
+    font-size: 18px;
+    border-width: 1px;
+    border-radius: 0;
+    border-top-color: var(--blood-light);
+    border-left-color: var(--blood-light);
+    border-right-color: #5a0f16;
+    border-bottom-color: #5a0f16;
+}
+
+.computer-root .start-button-active {
+    background-color: #7a1822;
+}
+
+.computer-root .start-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+}
+
+.computer-root .task-buttons {
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.computer-root .task-button {
+    flex-direction: row;
+    align-items: center;
+    height: 16px;
+    max-width: 100px;
+    margin: 0 3px 0 0;
+    padding: 0 6px;
+    background-color: var(--iron);
+    color: var(--parch);
+    font-size: 11px;
+    border-width: 1px;
+    border-radius: 0;
+    border-top-color: var(--iron-light);
+    border-left-color: var(--iron-light);
+    border-right-color: var(--iron-dark);
+    border-bottom-color: var(--iron-dark);
+}
+
+.computer-root .task-button-active {
+    background-color: #241519;
+    color: var(--gold);
+    border-color: var(--gold-dark);
+}
+
+.computer-root .task-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 3px;
+}
+
+.computer-root .clock {
+    height: 16px;
+    padding: 0 6px;
+    background-color: var(--iron-dark);
+    color: var(--gold);
+    font-size: 11px;
+    -unity-text-align: middle-center;
+    border-width: 1px;
+    border-color: var(--black);
+}
+
+.computer-root .start-menu {
+    position: absolute;
+    left: 3px;
+    bottom: 24px;
+    width: 120px;
+    padding: 2px;
+    background-color: var(--iron);
+    border-width: 2px;
+    border-top-color: var(--iron-light);
+    border-left-color: var(--iron-light);
+    border-right-color: var(--iron-dark);
+    border-bottom-color: var(--iron-dark);
+}
+
+.computer-root .start-menu-heading {
+    margin-bottom: 2px;
+    padding: 1px 5px;
+    background-color: var(--blood);
+    color: var(--gold);
+    -unity-font-definition: url("project://database/Assets/Fonts/Jacquard12-Regular.ttf?fileID=12800000&guid=8ce9f7e47e686014ca523f06ba8917f4&type=3#Jacquard12-Regular");
+    font-size: 18px;
+}
+
+.computer-root .start-menu-item {
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    padding: 3px 5px;
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--parch);
+    border-width: 0;
+    border-radius: 0;
+    font-size: 12px;
+}
+
+.computer-root .start-menu-item:hover {
+    background-color: var(--blood);
+    color: var(--gold);
+}
+
+.computer-root .start-menu-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+.computer-root .start-menu-line {
+    height: 2px;
+    margin: 2px 0;
+    background-color: var(--iron-dark);
+}
+
+.computer-root .toast {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    translate: -50% 0;
+    max-width: 320px;
+    padding: 4px 10px;
+    background-color: var(--black);
+    color: var(--gold);
+    font-size: 12px;
+    white-space: normal;
+    border-width: 1px;
+    border-color: var(--gold-dark);
+}
+
+.computer-root .dialog-layer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 22px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.computer-root .dialog {
+    width: 230px;
+    padding: 2px;
+    background-color: var(--iron);
+    border-width: 2px;
+    border-top-color: var(--iron-light);
+    border-left-color: var(--iron-light);
+    border-right-color: var(--iron-dark);
+    border-bottom-color: var(--iron-dark);
+}
+
+.computer-root .dialog-title {
+    padding: 1px 5px;
+    background-color: var(--blood);
+    color: var(--gold);
+    -unity-font-definition: url("project://database/Assets/Fonts/Jacquard12-Regular.ttf?fileID=12800000&guid=8ce9f7e47e686014ca523f06ba8917f4&type=3#Jacquard12-Regular");
+    font-size: 18px;
+}
+
+.computer-root .dialog-body {
+    flex-direction: row;
+    padding: 8px;
+    background-color: var(--parch);
+    color: var(--ink);
+}
+
+.computer-root .dialog-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+
+.computer-root .dialog-text {
+    flex-grow: 1;
+    flex-shrink: 1;
+    font-size: 12px;
+    white-space: normal;
+}
+
+.computer-root .dialog-button {
+    align-self: flex-end;
+    margin: 4px 2px 2px 0;
+}
+
+/* ---------- Right click menu, folder windows, notepad and the name prompt ---------- */
+
+.computer-root .context-menu {
+    position: absolute;
+    width: 112px;
+    padding: 2px;
+    background-color: var(--iron);
+    border-width: 2px;
+    border-top-color: var(--iron-light);
+    border-left-color: var(--iron-light);
+    border-right-color: var(--iron-dark);
+    border-bottom-color: var(--iron-dark);
+}
+
+.computer-root .explorer-path {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-left: 4px;
+    color: var(--gold-dark);
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.computer-root .explorer-list {
+    flex-grow: 1;
+    padding: 4px;
+}
+
+.computer-root .explorer-row {
+    flex-direction: row;
+    flex-shrink: 0;
+}
+
+.computer-root .explorer-list .desktop-icon {
+    margin: 0 2px 2px 0;
+}
+
+.computer-root .explorer-list .desktop-icon-name {
+    color: var(--ink);
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.computer-root .explorer-list .desktop-icon-selected {
+    background-color: rgba(163, 32, 43, 0.18);
+    border-color: var(--blood);
+}
+
+.computer-root .notepad-path {
+    flex-shrink: 0;
+    padding: 3px 8px;
+    color: #6b5230;
+    font-size: 11px;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--parch-edge);
+}
+
+.computer-root .notepad-field {
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    background-color: #f1e4bd;
+    --unity-cursor-color: #a3202b;
+    --unity-selection-color: rgba(163, 32, 43, 0.35);
+}
+
+.computer-root .notepad-field > .unity-base-text-field__input {
+    flex-grow: 1;
+    margin: 0;
+    padding: 6px 8px;
+    border-width: 0;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--ink);
+    -unity-font-definition: url("project://database/Assets/Fonts/VT323-Regular.ttf?fileID=12800000&guid=8cea0fd44a07db84cadce51fc83bf1f0&type=3#VT323-Regular");
+    font-size: 16px;
+    white-space: normal;
+    -unity-text-align: upper-left;
+}
+
+.computer-root .prompt-input {
+    margin: 6px 0 0 0;
+    --unity-cursor-color: #a3202b;
+    --unity-selection-color: rgba(163, 32, 43, 0.35);
+}
+
+.computer-root .prompt-input > .unity-base-text-field__input {
+    margin: 0;
+    padding: 2px 4px;
+    background-color: #f8efd2;
+    color: var(--ink);
+    border-width: 1px;
+    border-radius: 0;
+    border-color: var(--black);
+    -unity-font-definition: url("project://database/Assets/Fonts/VT323-Regular.ttf?fileID=12800000&guid=8cea0fd44a07db84cadce51fc83bf1f0&type=3#VT323-Regular");
+    font-size: 16px;
+}
+
+.computer-root .dialog-buttons {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 4px 2px 2px 0;
+}

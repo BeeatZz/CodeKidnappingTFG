@@ -1,0 +1,5 @@
+<linker>
+  <!-- Player code reaches these assemblies through reflection, so keep them on IL2CPP builds -->
+  <assembly fullname="CodeRunner" preserve="all"/>
+  <assembly fullname="Mission" preserve="all"/>
+</linker>

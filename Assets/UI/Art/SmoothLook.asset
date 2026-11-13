@@ -1,0 +1,203 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8e99b229cfdbcf488dadec9e13af2bc, type: 3}
+  m_Name: SmoothLook
+  m_EditorClassIdentifier: Assembly-CSharp::ComputerUI.ComputerLook
+  smooth: 1
+  titleFont: {fileID: 12800000, guid: 7c90941491f8db344aad2f959474fe19, type: 3}
+  bodyFont: {fileID: 12800000, guid: 7c90941491f8db344aad2f959474fe19, type: 3}
+  codeFont: {fileID: 12800000, guid: a3f82642d99edc24db217a5d8fa008fb, type: 3}
+  accent: {r: 0.78, g: 0.34, b: 0.45, a: 1}
+  neutralize: 0.9
+  wallpaperTint: {r: 0.4, g: 0.5, b: 0.8, a: 1}
+  skin:
+  - role: 0
+    sprite: {fileID: 21300000, guid: 37e5c6e6acc44bd4789d07afb216cc27, type: 3}
+    tint: {r: 1, g: 1, b: 1, a: 1}
+    borderScale: 11
+  - role: 1
+    sprite: {fileID: 21300000, guid: b9b8f590b77490c4287530e8746d1ccf, type: 3}
+    tint: {r: 0.16, g: 0.17, b: 0.21, a: 1}
+    borderScale: 7
+  - role: 2
+    sprite: {fileID: 21300000, guid: 71da055da957d644fb5066412fa1b068, type: 3}
+    tint: {r: 0.12, g: 0.13, b: 0.16, a: 1}
+    borderScale: 10
+  - role: 3
+    sprite: {fileID: 21300000, guid: a523483407744344d960198e7faaf09c, type: 3}
+    tint: {r: 0.2, g: 0.21, b: 0.26, a: 1}
+    borderScale: 9
+  - role: 4
+    sprite: {fileID: 21300000, guid: c0b141d2c008cd4498f8cf5018846897, type: 3}
+    tint: {r: 0.965, g: 0.965, b: 0.975, a: 1}
+    borderScale: 8
+  - role: 5
+    sprite: {fileID: 21300000, guid: 92f62daa0eeb6d9419365b3bdc86babb, type: 3}
+    tint: {r: 0.87, g: 0.88, b: 0.91, a: 1}
+    borderScale: 12
+  - role: 6
+    sprite: {fileID: 21300000, guid: 5dc60a5b9337f61468733ac88a4e3340, type: 3}
+    tint: {r: 0.1, g: 0.11, b: 0.14, a: 1}
+    borderScale: 11
+  - role: 7
+    sprite: {fileID: 21300000, guid: 0cb45a89bb277644792e1c1b60c762a8, type: 3}
+    tint: {r: 0.89, g: 0.9, b: 0.94, a: 1}
+    borderScale: 11
+  - role: 8
+    sprite: {fileID: 21300000, guid: 6a90dcfb6cfb75548b9927669e63c629, type: 3}
+    tint: {r: 0.8, g: 0.34, b: 0.46, a: 1}
+    borderScale: 11
+  - role: 9
+    sprite: {fileID: 21300000, guid: fa676f46c98272240955b709d948d9a3, type: 3}
+    tint: {r: 0.89, g: 0.9, b: 0.94, a: 1}
+    borderScale: 11
+  - role: 10
+    sprite: {fileID: 21300000, guid: 9cd11d63e1450d648bebb511cad3175f, type: 3}
+    tint: {r: 0.28, g: 0.3, b: 0.37, a: 1}
+    borderScale: 11
+  - role: 11
+    sprite: {fileID: 21300000, guid: 163e1994fec4e854da515635aca6e5ce, type: 3}
+    tint: {r: 0.965, g: 0.965, b: 0.975, a: 1}
+    borderScale: 11
+  - role: 12
+    sprite: {fileID: 21300000, guid: 1caa0ddfa82a6444b9992f9e5a948bff, type: 3}
+    tint: {r: 1, g: 1, b: 1, a: 1}
+    borderScale: 12
+  - role: 13
+    sprite: {fileID: 21300000, guid: 7fb4363e1b91ec648a0abe61f5fb892c, type: 3}
+    tint: {r: 0.8, g: 0.82, b: 0.88, a: 1}
+    borderScale: 11
+  - role: 14
+    sprite: {fileID: 21300000, guid: 28417cc12e65e4f498cb74f9f3ab46cb, type: 3}
+    tint: {r: 1, g: 0.93, b: 0.62, a: 1}
+    borderScale: 10
+  textScale: 0.85
+  wallpaperDetail: 2
+  sky: {fileID: 21300000, guid: 43aed1bd6276a014dbd1b85ad55b4e1f, type: 3}
+  moon: {fileID: 21300000, guid: 3093da925072cc848bc476614f1385f8, type: 3}
+  castle: {fileID: 21300000, guid: 0b2ff0e5e9add6444bfd89ac560e2462, type: 3}
+  hillsFar: {fileID: 21300000, guid: 23021e7a24f6660479b84a598f98658c, type: 3}
+  hillsNear: {fileID: 21300000, guid: a167b51edd5960d4896e75e791c46c21, type: 3}
+  clouds:
+  - {fileID: 21300000, guid: d79d729c5c90d3747a4aa436113a0592, type: 3}
+  - {fileID: 21300000, guid: a8255e45a924cbd428660362a93d5e67, type: 3}
+  - {fileID: 21300000, guid: 1900be6e62bcd8e4280b1a6032aacabe, type: 3}
+  - {fileID: 21300000, guid: 175cc483d5040ae42980c0f2d0d4cb77, type: 3}
+  - {fileID: 21300000, guid: 2e32779bbdc3512439f8dfebf93e9c05, type: 3}
+  - {fileID: 21300000, guid: 62884bf1e05e58244a0ec272fc7dee2e, type: 3}
+  - {fileID: 21300000, guid: 4e66ebfe26b9a59429c054b8d70d3584, type: 3}
+  - {fileID: 21300000, guid: 9fb99a545fc55974d94d88f9dfa105d9, type: 3}
+  - {fileID: 21300000, guid: bb6084fd3c797f74d97395b4700b1ba1, type: 3}
+  sceneSprites:
+  - {fileID: 21300000, guid: d7a428dfb38acd446acca6910a9d8dc8, type: 3}
+  - {fileID: 21300000, guid: a7220f87395fc8e40bbcb27d35ec757b, type: 3}
+  wallpaperPictures:
+  - {fileID: 21300000, guid: 7ad873b3711a1594984c4bfc938f04e6, type: 3}
+  - {fileID: 21300000, guid: 6a6df61c31a7190428403624a1e06058, type: 3}
+  - {fileID: 21300000, guid: 4a83431b89d06ad48b1e8cdbfc036ee0, type: 3}
+  - {fileID: 21300000, guid: cf4bccb008259904d8224f8b36ca0efb, type: 3}
+  - {fileID: 21300000, guid: 6fab1490e4be98b4282a4d9f872cdfcd, type: 3}
+  wallpaperNames:
+  - Stars
+  - Storm
+  - Aurora
+  - Night
+  - Agate
+  wallpaperTints:
+  - {r: 0.85, g: 0.9, b: 1, a: 1}
+  - {r: 0.65, g: 0.5, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0.8, g: 0.85, b: 1, a: 1}
+  - {r: 0.9, g: 0.8, b: 1, a: 1}
+  titleIconX: 7
+  titleIconSize: 14
+  titleTextX: 27
+  titleButtonsRight: 7
+  titleButtonSize: 14
+  icons:
+  - {fileID: 21300000, guid: e33d3ffec9ee4d1da735f704aa5e5a6d, type: 3}
+  - {fileID: 21300000, guid: 2a030db66ac0436780eda123bfc316bb, type: 3}
+  - {fileID: 21300000, guid: 8d36ee1ed1331324fbb11a450a4be3fd, type: 3}
+  - {fileID: 21300000, guid: f11740a125eead34896b16bc23494edb, type: 3}
+  - {fileID: 21300000, guid: 346ae46492364699b2ba1a1d2600c7cc, type: 3}
+  - {fileID: 21300000, guid: 5bfe463535a44ad6a1d81801ff1c8a88, type: 3}
+  - {fileID: 21300000, guid: 51acb86167d34e7ab6c16b0d5ef04b3b, type: 3}
+  - {fileID: 21300000, guid: c60edcab92b84562877893465986caf4, type: 3}
+  - {fileID: 21300000, guid: b9209eb6a431e1d459a816689595ed71, type: 3}
+  - {fileID: 21300000, guid: 56d98c64a3d830f4f940e9897c8d82b2, type: 3}
+  - {fileID: 21300000, guid: 13819eaf6d2fcc74ba836741689feb90, type: 3}
+  - {fileID: 21300000, guid: 698f78fab9b56884ab8d73641858b80a, type: 3}
+  - {fileID: 21300000, guid: 2280f1c77db184745a87cd1bd855840c, type: 3}
+  - {fileID: 21300000, guid: ba1b1e23e3ed9da4eabaee1780bc5ee7, type: 3}
+  - {fileID: 21300000, guid: 8f4165658f28fbd45b805eb93a4afd92, type: 3}
+  - {fileID: 21300000, guid: 5e8fc48427b682b4dbda03afcbc729c1, type: 3}
+  - {fileID: 21300000, guid: e717ee67eb194cf3ba5164b7f964079a, type: 3}
+  - {fileID: 21300000, guid: e15baa1d12824ca98ef92ff63bf9a21c, type: 3}
+  - {fileID: 21300000, guid: 52c96ea8a1fa400fa446b8e16ba6dd75, type: 3}
+  - {fileID: 21300000, guid: 759a7c7496ba4ae68f887008515ae57e, type: 3}
+  - {fileID: 21300000, guid: 7546ac9787823b148b18c8d136baf939, type: 3}
+  - {fileID: 21300000, guid: e30db2d06d0c022448f72d3b24982d47, type: 3}
+  - {fileID: 21300000, guid: 5d328aa28c8a47540a854d5dd07ce40d, type: 3}
+  - {fileID: 21300000, guid: 36ef02550eb9ba94f8aa9fb6f70f9d50, type: 3}
+  - {fileID: 21300000, guid: f3af9fd7efe1452bb1b1eec8efc7245a, type: 3}
+  - {fileID: 21300000, guid: 6af764474fb04bfeb6c928d2c284df11, type: 3}
+  - {fileID: 21300000, guid: dfa91386e5f58a847bc47090e99f78dd, type: 3}
+  - {fileID: 21300000, guid: 092472ee04034654681cb850b48f5437, type: 3}
+  - {fileID: 21300000, guid: afae6d0e959cd314f910ba29b4299730, type: 3}
+  - {fileID: 21300000, guid: 29dd4b92f2da4b446990806b447738ab, type: 3}
+  - {fileID: 21300000, guid: 40f202687f139064abd874ed5fc653f9, type: 3}
+  - {fileID: 21300000, guid: cb2abcbfc6408cc4a96710aaf722f227, type: 3}
+  - {fileID: 21300000, guid: 857d9716a372a3d44941ecfc190f72b2, type: 3}
+  - {fileID: 21300000, guid: e6b7d178953fa194ba92d6161d294c60, type: 3}
+  - {fileID: 21300000, guid: f753c816c3756b443967e6eabf1f22a9, type: 3}
+  - {fileID: 21300000, guid: 3be25cd2d96121e4bb2df8559cd912bb, type: 3}
+  - {fileID: 21300000, guid: 21b3d5a2e834aed49a819e9a27849cbc, type: 3}
+  - {fileID: 21300000, guid: efd46c48ba445d049a7d05e1e408084c, type: 3}
+  iconTints:
+  - name: Folder
+    color: {r: 1, g: 0.76, b: 0.28, a: 1}
+  - name: TextFile
+    color: {r: 0.45, g: 0.62, b: 0.95, a: 1}
+  - name: Drive
+    color: {r: 0.35, g: 0.7, b: 0.72, a: 1}
+  - name: Computer
+    color: {r: 0.4, g: 0.6, b: 0.95, a: 1}
+  - name: Oubliette
+    color: {r: 0.58, g: 0.62, b: 0.7, a: 1}
+  - name: WorkOrder
+    color: {r: 1, g: 0.6, b: 0.35, a: 1}
+  - name: ScryingGlass
+    color: {r: 0.72, g: 0.55, b: 1, a: 1}
+  - name: Settings
+    color: {r: 0.62, g: 0.66, b: 0.74, a: 1}
+  - name: Flame
+    color: {r: 1, g: 0.5, b: 0.38, a: 1}
+  - name: Skull
+    color: {r: 0.93, g: 0.45, b: 0.52, a: 1}
+  - name: Music
+    color: {r: 0.55, g: 0.65, b: 1, a: 1}
+  - name: Photos
+    color: {r: 0.45, g: 0.8, b: 0.55, a: 1}
+  - name: Calculator
+    color: {r: 1, g: 0.65, b: 0.4, a: 1}
+  - name: Mail
+    color: {r: 0.95, g: 0.85, b: 0.5, a: 1}
+  - name: Missions
+    color: {r: 0.9, g: 0.5, b: 0.5, a: 1}
+  - name: Clock
+    color: {r: 0.6, g: 0.85, b: 0.9, a: 1}
+  - name: Calendar
+    color: {r: 0.95, g: 0.55, b: 0.55, a: 1}
+  - name: Paint
+    color: {r: 0.75, g: 0.6, b: 1, a: 1}
+  - name: Browser
+    color: {r: 0.45, g: 0.75, b: 0.95, a: 1}

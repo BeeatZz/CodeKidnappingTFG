@@ -1,0 +1,183 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8e99b229cfdbcf488dadec9e13af2bc, type: 3}
+  m_Name: PixelLook
+  m_EditorClassIdentifier: Assembly-CSharp::ComputerUI.ComputerLook
+  smooth: 0
+  titleFont: {fileID: 12800000, guid: 9973257a3672dc649ae47bef2bec4c97, type: 3}
+  bodyFont: {fileID: 12800000, guid: 9973257a3672dc649ae47bef2bec4c97, type: 3}
+  codeFont: {fileID: 12800000, guid: 8cea0fd44a07db84cadce51fc83bf1f0, type: 3}
+  accent: {r: 0.64, g: 0.125, b: 0.17, a: 1}
+  neutralize: 0
+  wallpaperTint: {r: 0.82, g: 0.68, b: 0.9, a: 1}
+  skin:
+  - role: 0
+    sprite: {fileID: 21300000, guid: 9f2e5cba7f6c2e044ab707ccdc0eea48, type: 3}
+    tint: {r: 1, g: 1, b: 1, a: 1}
+    borderScale: 1
+  - role: 1
+    sprite: {fileID: 21300000, guid: 0131df21fcad64b4f95bf0b09849999a, type: 3}
+    tint: {r: 1, g: 1, b: 1, a: 1}
+    borderScale: 1
+  - role: 2
+    sprite: {fileID: 21300000, guid: 993e417f312584147b9cc86584220a73, type: 3}
+    tint: {r: 0.6, g: 0.57, b: 0.65, a: 1}
+    borderScale: 1
+  - role: 3
+    sprite: {fileID: 21300000, guid: 2d20ba7f30b7ba7488d57a07d28ee13e, type: 3}
+    tint: {r: 0.38, g: 0.36, b: 0.42, a: 1}
+    borderScale: 1
+  - role: 4
+    sprite: {fileID: 21300000, guid: 8bd3d6cc67cbdd44189f17f76f366b66, type: 3}
+    tint: {r: 1, g: 1, b: 1, a: 1}
+    borderScale: 1
+  - role: 5
+    sprite: {fileID: 21300000, guid: 44259cde8f5dc0c4ba5af5b9d9ead470, type: 3}
+    tint: {r: 1, g: 1, b: 1, a: 1}
+    borderScale: 1
+  - role: 6
+    sprite: {fileID: 21300000, guid: 1f07885297b7ea441971aa302f29cffb, type: 3}
+    tint: {r: 0.5, g: 0.48, b: 0.55, a: 1}
+    borderScale: 1
+  - role: 7
+    sprite: {fileID: 21300000, guid: 4450a240ce100df449c0f682ef15ae17, type: 3}
+    tint: {r: 1, g: 1, b: 1, a: 1}
+    borderScale: 1
+  - role: 8
+    sprite: {fileID: 21300000, guid: f267bdcbb038f1e4eb51521f7922cd44, type: 3}
+    tint: {r: 1, g: 1, b: 1, a: 1}
+    borderScale: 1
+  - role: 9
+    sprite: {fileID: 21300000, guid: 6ead3aa9de0bc7b4992940baf1e1a977, type: 3}
+    tint: {r: 1, g: 1, b: 1, a: 1}
+    borderScale: 1
+  - role: 10
+    sprite: {fileID: 21300000, guid: 6fd232b5ca86cfe489db2232cd417a88, type: 3}
+    tint: {r: 1, g: 1, b: 1, a: 1}
+    borderScale: 1
+  - role: 11
+    sprite: {fileID: 21300000, guid: ac2337a2845bb2446bd0a401585974e0, type: 3}
+    tint: {r: 1, g: 1, b: 1, a: 1}
+    borderScale: 1
+  - role: 12
+    sprite: {fileID: 21300000, guid: c897c536527d4114183d10c22a066ae4, type: 3}
+    tint: {r: 1, g: 1, b: 1, a: 1}
+    borderScale: 1
+  - role: 13
+    sprite: {fileID: 21300000, guid: f03d6cc8e9785f946944aa2335dbbc10, type: 3}
+    tint: {r: 1, g: 1, b: 1, a: 1}
+    borderScale: 1
+  - role: 14
+    sprite: {fileID: 21300000, guid: 8e7f9767364cbf94abbe10bf8d02bf7e, type: 3}
+    tint: {r: 1, g: 1, b: 1, a: 1}
+    borderScale: 1
+  textScale: 1
+  wallpaperDetail: 1
+  sky: {fileID: 21300000, guid: 79cd4f58ac7d3d149be2a85c71416ade, type: 3}
+  moon: {fileID: 21300000, guid: ba7ad2409b807b24aa52a07652139fae, type: 3}
+  castle: {fileID: 21300000, guid: 257ec6c538909be4f89aede853c6897f, type: 3}
+  hillsFar: {fileID: 21300000, guid: 354a1f0c42a4f7e4193e250f4a68011f, type: 3}
+  hillsNear: {fileID: 21300000, guid: efd79c70a9b131c46be2cb925b6e8c3e, type: 3}
+  clouds:
+  - {fileID: 21300000, guid: c6d1c6725f6ee3a4e86dac015f510fb3, type: 3}
+  - {fileID: 21300000, guid: 042e90e5a51141449a3a426dfc626eae, type: 3}
+  - {fileID: 21300000, guid: 8bede73f9c8194b4c871b67beb75d2d4, type: 3}
+  - {fileID: 21300000, guid: 04a411b74b2fdc84a9675139bfdc7e6a, type: 3}
+  - {fileID: 21300000, guid: b2f82fdf4ebb3d24e93bdc2db490c511, type: 3}
+  - {fileID: 21300000, guid: 01cbce667c1c92a43a3ce54bcf18fee0, type: 3}
+  - {fileID: 21300000, guid: dcc2508222c08ac43bc3f4eaab406798, type: 3}
+  - {fileID: 21300000, guid: 53f75c20087d3634596d4aba9ef3b57b, type: 3}
+  - {fileID: 21300000, guid: 61cb385ffd571f54994982ff70c929f0, type: 3}
+  sceneSprites:
+  - {fileID: 21300000, guid: 42fa68a631dd4734e9d74c0285c971cb, type: 3}
+  - {fileID: 21300000, guid: a4994568d45d6fc49871e67b012ce643, type: 3}
+  wallpaperPictures:
+  - {fileID: 21300000, guid: 85fe727bf0f79d44da7d5e105a847efd, type: 3}
+  - {fileID: 21300000, guid: a2adf948416feeb47bbd0f07873f1b58, type: 3}
+  - {fileID: 21300000, guid: 44109d4df5baf33438bc7cfc39f23920, type: 3}
+  - {fileID: 21300000, guid: 60fb361301133614794a6c6e2a911cad, type: 3}
+  - {fileID: 21300000, guid: 355e2e07a0467184cb99afa56412567b, type: 3}
+  wallpaperNames:
+  - Stars
+  - Storm
+  - Aurora
+  - Night
+  - Agate
+  wallpaperTints:
+  - {r: 0.85, g: 0.9, b: 1, a: 1}
+  - {r: 0.65, g: 0.5, b: 1, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0.8, g: 0.85, b: 1, a: 1}
+  - {r: 0.9, g: 0.8, b: 1, a: 1}
+  titleIconX: 7
+  titleIconSize: 14
+  titleTextX: 27
+  titleButtonsRight: 4
+  titleButtonSize: 16
+  icons:
+  - {fileID: 21300000, guid: e78222f997754ccbaa28219d893079a7, type: 3}
+  - {fileID: 21300000, guid: d58eeed0d2144f9aafbde335a8339325, type: 3}
+  - {fileID: 21300000, guid: 239113ca541d63d40a54bef546b62943, type: 3}
+  - {fileID: 21300000, guid: 323d289ff490ce94182714f56c58e864, type: 3}
+  - {fileID: 21300000, guid: e0106f2c53a34a44b720ee865448e1f5, type: 3}
+  - {fileID: 21300000, guid: 3c439fc8c5d641b692c05182d00379a4, type: 3}
+  - {fileID: 21300000, guid: 0a17e4202d414e4eb4005f1cace79ca0, type: 3}
+  - {fileID: 21300000, guid: 56f5a3627115474ea62ee3c2c8b2ff37, type: 3}
+  - {fileID: 21300000, guid: 6fb6a82df4bac35448dc7150aade10e0, type: 3}
+  - {fileID: 21300000, guid: 6320553a7a432f843bd765a9bad98c13, type: 3}
+  - {fileID: 21300000, guid: 3a19b2b8e59975841aaf1ec228a7a232, type: 3}
+  - {fileID: 21300000, guid: 125a446bfe208c44b85347ff6800f6c3, type: 3}
+  - {fileID: 21300000, guid: 23ad5ed12cdd3ff45a36caeec79d3b2f, type: 3}
+  - {fileID: 21300000, guid: 7f5eb1dccac1af243a217a5b47bcecf0, type: 3}
+  - {fileID: 21300000, guid: 1d8369dc0802250438ace507bd4dc9d1, type: 3}
+  - {fileID: 21300000, guid: 3da5f58dd65eff74484e1d491e825132, type: 3}
+  - {fileID: 21300000, guid: 50e08dddf549478bae45e3f9b98a8e54, type: 3}
+  - {fileID: 21300000, guid: 2dd99d7b41db4bfb911815409461290f, type: 3}
+  - {fileID: 21300000, guid: e7dcaaa812bb4a99a633629730403821, type: 3}
+  - {fileID: 21300000, guid: e0d3b3ffb36d46c4a76bde87541892d2, type: 3}
+  - {fileID: 21300000, guid: 80e564d692ba87045a7bbe1c5ff80fa0, type: 3}
+  - {fileID: 21300000, guid: efb7507819cb928468115e0a1ffe26d1, type: 3}
+  - {fileID: 21300000, guid: 5c330b403a9d62147a0e40af0dc1e65d, type: 3}
+  - {fileID: 21300000, guid: 81fa17f3cfef0f1479b5684f32111e9d, type: 3}
+  - {fileID: 21300000, guid: 1e39bcf2dbf2424a9348611e8ebcfa33, type: 3}
+  - {fileID: 21300000, guid: 5346f700bf0d4249aa1fd580e5298899, type: 3}
+  - {fileID: 21300000, guid: 8925213a334393349b6bbe2c1e299851, type: 3}
+  - {fileID: 21300000, guid: 652389f00130a0d448303122fda16f39, type: 3}
+  - {fileID: 21300000, guid: 8896176ec86538e4f9b4095f418618ae, type: 3}
+  - {fileID: 21300000, guid: 6bb7ee1da4253c64383bfc8562675d37, type: 3}
+  - {fileID: 21300000, guid: eb13743fb9f7b4244ba5d437951fe251, type: 3}
+  - {fileID: 21300000, guid: 77039bf4e1f55be498c578fed6a22082, type: 3}
+  - {fileID: 21300000, guid: ece166f01b22c344faa53215e0fcc394, type: 3}
+  - {fileID: 21300000, guid: 25fbd8d7b17704c449a73b57c7aebe6f, type: 3}
+  - {fileID: 21300000, guid: 28222726c83047d409076ad55eda0e23, type: 3}
+  - {fileID: 21300000, guid: 1face45d696095946b354e1b7a4ca502, type: 3}
+  - {fileID: 21300000, guid: 1272eadd849ff1f44a74d93c50e5e583, type: 3}
+  - {fileID: 21300000, guid: 9aaadd807fc925a4c80ad12e8223c8b6, type: 3}
+  iconTints:
+  - name: Music
+    color: {r: 0.55, g: 0.8, b: 0.95, a: 1}
+  - name: Photos
+    color: {r: 0.55, g: 0.85, b: 0.55, a: 1}
+  - name: Calculator
+    color: {r: 0.9, g: 0.7, b: 0.45, a: 1}
+  - name: Mail
+    color: {r: 0.95, g: 0.85, b: 0.55, a: 1}
+  - name: Missions
+    color: {r: 0.9, g: 0.55, b: 0.5, a: 1}
+  - name: Clock
+    color: {r: 0.6, g: 0.85, b: 0.9, a: 1}
+  - name: Calendar
+    color: {r: 0.95, g: 0.6, b: 0.55, a: 1}
+  - name: Paint
+    color: {r: 0.75, g: 0.6, b: 0.95, a: 1}
+  - name: Browser
+    color: {r: 0.5, g: 0.75, b: 0.9, a: 1}
